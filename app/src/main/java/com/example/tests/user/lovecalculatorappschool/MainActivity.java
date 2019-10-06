@@ -32,14 +32,29 @@ public class MainActivity extends AppCompatActivity {
 
     public void calculateMatch(View view)
     {
-        EditText etNameOne = findViewById(R.id.etNameTwo);
-        EditText etNameTwo = findViewById(R.id.etNameTwo);
+        int sum1 = 0;
+        int sum2 = 0;
+
+        String etNameOne = ((EditText)findViewById(R.id.etNameOne)).getText().toString();
+        String etNameTwo = ((EditText)findViewById(R.id.etNameTwo)).getText().toString();
         TextView tvResult = findViewById(R.id.tvResult);
 
-        int etNameLength1 = etNameOne.length();
-        int etNameLength2 = etNameTwo.length();
+        for(int i = 0; i< etNameOne.length(); i++)
+        {
+            char ch = etNameOne.charAt(i);
+            int ascii = ch;
+            sum1 = sum1 + ascii;
+        }
 
-        int resultInProcent = Math.abs(etNameLength1 + etNameLength2 - 100);
+        for(int x = 0; x< etNameTwo.length(); x++)
+        {
+            char ch = etNameTwo.charAt(x);
+            int ascii = ch;
+            sum2 = sum2 + ascii;
+        }
+
+        int totaal = sum1 + sum2;
+        int resultInProcent = Math.abs(totaal / 2);
 
         tvResult.setText(Integer.toString(resultInProcent));
     }

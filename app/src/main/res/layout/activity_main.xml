@@ -11,10 +11,10 @@
         android:id="@+id/tvInstructions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="63dp"
-        android:layout_marginTop="49dp"
+        android:layout_marginBottom="412dp"
+        android:layout_marginTop="45dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/etNameOne"
+        app:layout_constraintBottom_toTopOf="@+id/tvResult"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,46 +23,63 @@
         android:id="@+id/etNameOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="32dp"
         android:ems="10"
+        android:hint="Your Name"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintBottom_toTopOf="@+id/etNameTwo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/etNameTwo"
         app:layout_constraintTop_toBottomOf="@+id/tvInstructions" />
 
     <EditText
         android:id="@+id/etNameTwo"
         android:layout_width="215dp"
-        android:layout_height="52dp"
-        android:layout_marginBottom="123dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="119dp"
         android:ems="10"
+        android:hint="Crush name"
         android:inputType="textPersonName"
         android:text="Name"
         app:layout_constraintBottom_toTopOf="@+id/btnCalculateMatch"
-        app:layout_constraintStart_toStartOf="@+id/etNameOne"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNameOne" />
 
     <Button
         android:id="@+id/btnCalculateMatch"
         android:layout_width="117dp"
-        android:layout_height="53dp"
-        android:layout_marginBottom="53dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="23dp"
         android:text="Calculate"
-        app:layout_constraintBottom_toTopOf="@+id/tvResult"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNameTwo" />
 
-    <TextView
-        android:id="@+id/tvResult"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginBottom="40dp"
-        android:text="TextView"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="119dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        android:background="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCalculateMatch" />
+
+        app:layout_constraintTop_toBottomOf="@+id/btnCalculateMatch"
+        app:srcCompat="@drawable/heart" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="36dp"
+        android:layout_height="21dp"
+        android:layout_marginBottom="36dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInstructions" />
+
 </android.support.constraint.ConstraintLayout>
