@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void calculateMatch(View view)
     {
+        int maxAmount = 100;
         int sum1 = 0;
         int sum2 = 0;
 
@@ -54,7 +55,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
         int totaal = sum1 + sum2;
-        int resultInProcent = Math.abs(totaal / 2);
+        int resultInProcent = Math.abs(totaal / 40);
+
+        if(resultInProcent > maxAmount)
+        {
+            resultInProcent = maxAmount;
+        }
 
         tvResult.setText(Integer.toString(resultInProcent));
     }
