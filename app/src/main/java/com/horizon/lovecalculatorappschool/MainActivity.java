@@ -1,4 +1,4 @@
-package com.example.tests.user.lovecalculatorappschool;
+package com.horizon.lovecalculatorappschool;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,11 +13,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(com.horizon.lovecalculatorappschool.R.layout.activity_main);
 
-        TextView tvInstructions = findViewById(R.id.tvInstructions);
-        tvInstructions.setText(getString(R.string.app_name));
-        Button submitButton = findViewById(R.id.btnCalculateMatch);
+        TextView tvInstructions = findViewById(com.horizon.lovecalculatorappschool.R.id.tvInstructions);
+        tvInstructions.setText(getString(com.horizon.lovecalculatorappschool.R.string.app_name));
+        Button submitButton = findViewById(com.horizon.lovecalculatorappschool.R.id.btnCalculateMatch);
 
 
         submitButton.setOnClickListener(new View.OnClickListener() {
@@ -36,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
         int sum1 = 0;
         int sum2 = 0;
 
-        String etNameOne = ((EditText)findViewById(R.id.etNameOne)).getText().toString();
-        String etNameTwo = ((EditText)findViewById(R.id.etNameTwo)).getText().toString();
-        TextView tvResult = findViewById(R.id.tvResult);
+        String etNameOne = ((EditText)findViewById(com.horizon.lovecalculatorappschool.R.id.etNameOne)).getText().toString();
+        String etNameTwo = ((EditText)findViewById(com.horizon.lovecalculatorappschool.R.id.etNameTwo)).getText().toString();
+        TextView tvResult = findViewById(com.horizon.lovecalculatorappschool.R.id.tvResult);
 
         for(int i = 0; i< etNameOne.length(); i++)
         {

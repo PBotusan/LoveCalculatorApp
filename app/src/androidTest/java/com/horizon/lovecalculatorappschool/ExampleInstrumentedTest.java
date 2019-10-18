@@ -1,4 +1,4 @@
-package com.example.tests.user.lovecalculatorappschool;
+package com.horizon.lovecalculatorappschool;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

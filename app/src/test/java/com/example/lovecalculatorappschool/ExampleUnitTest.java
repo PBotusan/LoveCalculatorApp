@@ -1,4 +1,4 @@
-package com.example.tests.user.lovecalculatorappschool;
+package com.example.lovecalculatorappschool;
 
 import org.junit.Test;
 
